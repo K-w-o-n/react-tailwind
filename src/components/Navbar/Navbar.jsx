@@ -1,5 +1,5 @@
 import React from "react";
-
+import {IoMdSearch} from "react-icons/io";
   const MenuLinks = [
     { id: 1, name: "Home", link: "/#" },
     { id: 2, name: "Shop", link: "/#shop" },
@@ -13,7 +13,7 @@ const Navbar = () => {
   return (
     <div className="bg-white dark:bg-gray-500 dark:text-white duration-200 realtive z-40">
       <div className="py-4">
-        <div className="container">
+        <div className="container flex justify-between items-center">
           {/* logo and links section */}
           <div className="flex gap-4 items-center">
             <a
@@ -38,6 +38,17 @@ const Navbar = () => {
             </div>
           </div>
           {/* navbar right section */}
+          <div className="flex justify-between items-center gap-4">
+            {/* Search bar setting */}
+            <div className="realtive group hidden sm:block">
+              <input type="text" className="search-bar" placeholder="Search"
+              
+              />
+              <IoMdSearch className="text-xl text-gray-600 dark:text-gray -400"/>
+            </div>
+            {/* dark Mode section */}
+
+          </div>
         </div>
       </div>
     </div>
